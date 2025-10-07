@@ -326,7 +326,7 @@ Having issues? Need help?
 
 ### Dashboard View
 The main dashboard provides an at-a-glance view of your system's health and performance.
-![App Screenshot](https://i.imgur.com/abcd1234.png](https://imgur.com/g8XZw9O)
+![Screenshot](https://i.imgur.com/g8XZw9O.png)
 
 ### Process Manager
 Advanced process management with real-time CPU and memory monitoring, along with the ability to control process priority and lifecycle.
