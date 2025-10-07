@@ -217,6 +217,7 @@ Contributions are welcome! Please follow these guidelines:
 
 ## 🐛 Known Issues
 
+- ⚠️ GPU Memory not accurate. Will get around to fixing that.
 - ⚠️ Some system processes cannot be terminated due to Windows security
 - ⚠️ GPU monitoring requires compatible hardware
 - ⚠️ Network real-time monitoring may have slight delays on some systems
@@ -285,7 +286,7 @@ SOFTWARE.
 
 - Website: [Coming Soon]
 - Email: support@hrzenak.tech
-- GitHub: [@yourusername](https://github.com/yourusername)
+- GitHub: [@TechGuyKy](https://github.com/TechGuyKy)
 
 ---
 
@@ -294,8 +295,7 @@ SOFTWARE.
 - [LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor) - Hardware monitoring library
 - [Ookla Speedtest CLI](https://www.speedtest.net/apps/cli) - Internet speed testing
 - [WPF](https://github.com/dotnet/wpf) - UI framework
-- Community contributors and testers
-
+- [Termi] - Allowing me to use his system to test the software
 ---
 
 ## ⚖️ Disclaimer
@@ -326,6 +326,7 @@ Having issues? Need help?
 
 ### Dashboard View
 The main dashboard provides an at-a-glance view of your system's health and performance.
+![App Screenshot](https://i.imgur.com/abcd1234.png](https://imgur.com/g8XZw9O)
 
 ### Process Manager
 Advanced process management with real-time CPU and memory monitoring, along with the ability to control process priority and lifecycle.
@@ -347,11 +348,6 @@ Comprehensive hardware details including CPU specifications, GPU information, me
 - Run as Administrator
 - Check Windows Event Viewer for errors
 
-**Speed test not working**
-- Download speedtest.exe from Ookla
-- Place in Tools/ folder
-- Restart AnalyzeMe
-
 **Cannot modify services**
 - Run AnalyzeMe as Administrator
 - Check Windows Service permissions
@@ -364,7 +360,7 @@ Comprehensive hardware details including CPU specifications, GPU information, me
 ---
 
 <div align="center">
-  <h3>Made with ❤️ by Hrzenak Technologies</h3>
+  <h3>Made with ❤️ by KyFu</h3>
   <p>If you find this project useful, please consider giving it a ⭐!</p>
   <p><strong>Version 1.2.0 BETA</strong> | © 2025 Hrzenak Technologies</p>
 </div>
