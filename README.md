@@ -134,7 +134,7 @@
 1. Go to **Network** tab
 2. Click **🚀 RUN SPEED TEST**
 3. Wait 30-60 seconds for results
-4. View download/upload speeds and ping
+4. View download/upload speeds and ping as well as other real-time network metrics
 
 ### Service Management
 1. Navigate to **Programs** → **Services** tab
@@ -165,7 +165,6 @@
   - Windows Management Instrumentation (WMI)
   - Performance Counters
   - System.Diagnostics
-  - LibreHardwareMonitor (for sensors)
 
 ### Project Structure
 ```
@@ -222,6 +221,7 @@ Contributions are welcome! Please follow these guidelines:
 - ⚠️ GPU monitoring requires compatible hardware
 - ⚠️ Network real-time monitoring may have slight delays on some systems
 - ⚠️ Administrator privileges required for service management
+- ⚠️ Users are seeing slight inaccuracies when it comes to speedtests. Working on a more advanced calculation method.
 
 ---
 
@@ -285,7 +285,7 @@ SOFTWARE.
 **Hrzenak Technologies**
 
 - Website: [Coming Soon]
-- Email: support@hrzenak.tech
+- Email: Kyle@GoForti.com
 - GitHub: [@TechGuyKy](https://github.com/TechGuyKy)
 
 ---
@@ -306,7 +306,7 @@ SOFTWARE.
 - Changing process priorities
 - Making system optimizations
 
-**The developers are not responsible for any system instability or data loss caused by improper use of this software.**
+**As the developer, I am not responsible for any system instability or data loss caused by improper use of this software.**
 
 Always create a system restore point before making significant changes to your system.
 
@@ -316,9 +316,9 @@ Always create a system restore point before making significant changes to your s
 
 Having issues? Need help?
 
-- 📧 **Email:** support@hrzenak.tech
-- 🐛 **Bug Reports:** [GitHub Issues](https://github.com/yourusername/AnalyzeMe/issues)
-- 💡 **Feature Requests:** [GitHub Discussions](https://github.com/yourusername/AnalyzeMe/discussions)
+- 📧 **Email:** Kyle@GoForti.com
+- 🐛 **Bug Reports:** [GitHub Issues](https://github.com/TechGuyKy/AnalyzeMe/issues)
+- 💡 **Feature Requests:** [GitHub Discussions](https://github.com/TechGuyKy/AnalyzeMe/discussions)
 
 ---
 
@@ -330,12 +330,16 @@ The main dashboard provides an at-a-glance view of your system's health and perf
 
 ### Process Manager
 Advanced process management with real-time CPU and memory monitoring, along with the ability to control process priority and lifecycle.
+![Screenshot](https://i.imgur.com/VIssImP.png)
 
 ### Network Monitor
 Track your network usage in real-time and perform internet speed tests directly from the application.
+![Screenshot](https://i.imgur.com/pTxHnwn.png)
 
 ### Hardware Information
 Comprehensive hardware details including CPU specifications, GPU information, memory configuration, and storage devices.
+![Screenshot](https://i.imgur.com/VkoEXhC.png)
+
 
 ---
 
