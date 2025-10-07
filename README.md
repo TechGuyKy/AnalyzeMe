@@ -36,7 +36,7 @@
 1. **Download the latest release**
    ```bash
    # Clone the repository
-   git clone https://github.com/yourusername/AnalyzeMe.git
+   git clone https://github.com/TechGuyKy/AnalyzeMe.git
    cd AnalyzeMe
    ```
 
