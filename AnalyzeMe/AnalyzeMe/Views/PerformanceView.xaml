@@ -1,0 +1,253 @@
+<Page x:Class="AnalyzeMe.Views.PerformanceView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      d:DesignHeight="750" d:DesignWidth="1250"
+      Background="Transparent">
+
+	<ScrollViewer VerticalScrollBarVisibility="Auto" Padding="20">
+		<StackPanel>
+			<TextBlock Text="PERFORMANCE MONITOR"
+                     Style="{StaticResource TitleText}"
+                     Margin="0,0,0,20"/>
+
+			<!-- Real-time Metrics -->
+			<Border Style="{StaticResource CyberCard}">
+				<StackPanel>
+					<TextBlock Text="REAL-TIME METRICS"
+                             FontFamily="Consolas"
+                             FontSize="18"
+                             FontWeight="Bold"
+                             Foreground="#00ffff"
+                             Margin="0,0,0,15"/>
+
+					<!-- CPU Usage -->
+					<StackPanel Margin="0,0,0,20">
+						<Grid>
+							<TextBlock Text="🔥 CPU USAGE" Style="{StaticResource SubtitleText}"/>
+							<TextBlock x:Name="CpuPercentText" Text="0%"
+                                     HorizontalAlignment="Right"
+                                     Foreground="#00ffff"
+                                     FontFamily="Consolas"
+                                     FontSize="18"
+                                     FontWeight="Bold"/>
+						</Grid>
+						<ProgressBar x:Name="CpuProgressBar"
+                                   Style="{StaticResource CyberProgressBar}"
+                                   Margin="0,8,0,0"
+                                   Value="0"
+                                   Maximum="100"/>
+						<TextBlock x:Name="CpuStatusText"
+                                 Text="Normal"
+                                 FontFamily="Consolas"
+                                 FontSize="11"
+                                 Foreground="#6a7a8a"
+                                 Margin="0,5,0,0"/>
+					</StackPanel>
+
+					<!-- RAM Usage -->
+					<StackPanel Margin="0,0,0,20">
+						<Grid>
+							<TextBlock Text="💾 RAM USAGE" Style="{StaticResource SubtitleText}"/>
+							<TextBlock x:Name="RamPercentText" Text="0%"
+                                     HorizontalAlignment="Right"
+                                     Foreground="#ff00ff"
+                                     FontFamily="Consolas"
+                                     FontSize="18"
+                                     FontWeight="Bold"/>
+						</Grid>
+						<ProgressBar x:Name="RamProgressBar"
+                                   Style="{StaticResource CyberProgressBar}"
+                                   Margin="0,8,0,0"
+                                   Value="0"
+                                   Maximum="100"
+                                   Foreground="#ff00ff"/>
+						<TextBlock x:Name="RamStatusText"
+                                 Text="Normal"
+                                 FontFamily="Consolas"
+                                 FontSize="11"
+                                 Foreground="#6a7a8a"
+                                 Margin="0,5,0,0"/>
+					</StackPanel>
+
+					<!-- Disk Usage -->
+					<StackPanel Margin="0,0,0,20">
+						<Grid>
+							<TextBlock Text="💿 DISK USAGE" Style="{StaticResource SubtitleText}"/>
+							<TextBlock x:Name="DiskPercentText" Text="0%"
+                                     HorizontalAlignment="Right"
+                                     Foreground="#9d00ff"
+                                     FontFamily="Consolas"
+                                     FontSize="18"
+                                     FontWeight="Bold"/>
+						</Grid>
+						<ProgressBar x:Name="DiskProgressBar"
+                                   Style="{StaticResource CyberProgressBar}"
+                                   Margin="0,8,0,0"
+                                   Value="0"
+                                   Maximum="100"
+                                   Foreground="#9d00ff"/>
+						<TextBlock x:Name="DiskStatusText"
+                                 Text="Normal"
+                                 FontFamily="Consolas"
+                                 FontSize="11"
+                                 Foreground="#6a7a8a"
+                                 Margin="0,5,0,0"/>
+					</StackPanel>
+
+					<!-- Page File Usage -->
+					<StackPanel>
+						<Grid>
+							<TextBlock Text="📄 PAGE FILE USAGE" Style="{StaticResource SubtitleText}"/>
+							<TextBlock x:Name="PageFilePercentText" Text="0%"
+                                     HorizontalAlignment="Right"
+                                     Foreground="#ffaa00"
+                                     FontFamily="Consolas"
+                                     FontSize="18"
+                                     FontWeight="Bold"/>
+						</Grid>
+						<ProgressBar x:Name="PageFileProgressBar"
+                                   Style="{StaticResource CyberProgressBar}"
+                                   Margin="0,8,0,0"
+                                   Value="0"
+                                   Maximum="100"
+                                   Foreground="#ffaa00"/>
+						<TextBlock x:Name="PageFileStatusText"
+                                 Text="Normal"
+                                 FontFamily="Consolas"
+                                 FontSize="11"
+                                 Foreground="#6a7a8a"
+                                 Margin="0,5,0,0"/>
+					</StackPanel>
+				</StackPanel>
+			</Border>
+
+			<!-- System Statistics -->
+			<Border Style="{StaticResource CyberCard}" Margin="0,20,0,0">
+				<StackPanel>
+					<TextBlock Text="SYSTEM STATISTICS"
+                             FontFamily="Consolas"
+                             FontSize="18"
+                             FontWeight="Bold"
+                             Foreground="#00ffff"
+                             Margin="0,0,0,15"/>
+
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+
+						<StackPanel Grid.Column="0" Margin="0,0,20,0">
+							<TextBlock Text="Active Processes:" Style="{StaticResource SubtitleText}" Margin="0,5"/>
+							<TextBlock x:Name="ProcessCountText" Text="0"
+                                     FontSize="32"
+                                     FontFamily="Consolas"
+                                     Foreground="#00ffff"
+                                     FontWeight="Bold"/>
+						</StackPanel>
+
+						<StackPanel Grid.Column="1" Margin="0,0,20,0">
+							<TextBlock Text="Active Threads:" Style="{StaticResource SubtitleText}" Margin="0,5"/>
+							<TextBlock x:Name="ThreadCountText" Text="0"
+                                     FontSize="32"
+                                     FontFamily="Consolas"
+                                     Foreground="#ff00ff"
+                                     FontWeight="Bold"/>
+						</StackPanel>
+
+						<StackPanel Grid.Column="2">
+							<TextBlock Text="System Handles:" Style="{StaticResource SubtitleText}" Margin="0,5"/>
+							<TextBlock x:Name="HandleCountText" Text="0"
+                                     FontSize="32"
+                                     FontFamily="Consolas"
+                                     Foreground="#9d00ff"
+                                     FontWeight="Bold"/>
+						</StackPanel>
+					</Grid>
+				</StackPanel>
+			</Border>
+
+			<!-- Top Processes -->
+			<Border Style="{StaticResource CyberCard}" Margin="0,20,0,0">
+				<StackPanel>
+					<Grid Margin="0,0,0,15">
+						<TextBlock Text="TOP PROCESSES BY MEMORY"
+                                 FontFamily="Consolas"
+                                 FontSize="18"
+                                 FontWeight="Bold"
+                                 Foreground="#00ffff"/>
+						<TextBlock Text="(Top 10)"
+                                 FontFamily="Consolas"
+                                 FontSize="12"
+                                 Foreground="#6a7a8a"
+                                 HorizontalAlignment="Right"
+                                 VerticalAlignment="Center"/>
+					</Grid>
+
+					<ListView x:Name="ProcessListView"
+                            Style="{StaticResource CyberListView}"
+                            Height="350">
+						<ListView.ItemTemplate>
+							<DataTemplate>
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="*"/>
+										<ColumnDefinition Width="100"/>
+										<ColumnDefinition Width="80"/>
+										<ColumnDefinition Width="80"/>
+									</Grid.ColumnDefinitions>
+
+									<StackPanel Grid.Column="0">
+										<TextBlock Text="{Binding Name}"
+                                                 Foreground="#ffffff"
+                                                 FontFamily="Consolas"
+                                                 FontWeight="Bold"
+                                                 FontSize="14"/>
+										<TextBlock FontFamily="Consolas" FontSize="11" Foreground="#6a7a8a">
+											<Run Text="PID: "/>
+											<Run Text="{Binding Id}"/>
+											<Run Text=" | Status: "/>
+											<Run Text="{Binding Status}"/>
+										</TextBlock>
+									</StackPanel>
+
+									<TextBlock Grid.Column="1"
+                                             Text="{Binding DisplayMemory}"
+                                             Foreground="#ff00ff"
+                                             FontFamily="Consolas"
+                                             FontWeight="Bold"
+                                             VerticalAlignment="Center"
+                                             HorizontalAlignment="Right"/>
+
+									<TextBlock Grid.Column="2"
+                                             FontFamily="Consolas"
+                                             FontSize="11"
+                                             Foreground="#6a7a8a"
+                                             VerticalAlignment="Center"
+                                             HorizontalAlignment="Right">
+										<Run Text="T: "/>
+										<Run Text="{Binding ThreadCount}"/>
+									</TextBlock>
+
+									<TextBlock Grid.Column="3"
+                                             FontFamily="Consolas"
+                                             FontSize="11"
+                                             Foreground="#6a7a8a"
+                                             VerticalAlignment="Center"
+                                             HorizontalAlignment="Right">
+										<Run Text="H: "/>
+										<Run Text="{Binding HandleCount}"/>
+									</TextBlock>
+								</Grid>
+							</DataTemplate>
+						</ListView.ItemTemplate>
+					</ListView>
+				</StackPanel>
+			</Border>
+		</StackPanel>
+	</ScrollViewer>
+</Page>

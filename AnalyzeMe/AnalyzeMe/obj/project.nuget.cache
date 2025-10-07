@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "um/GxjCnpp4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\AnalyzeMe.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\KyFu\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512",
+    "C:\\Users\\KyFu\\.nuget\\packages\\system.codedom\\8.0.0\\system.codedom.8.0.0.nupkg.sha512",
+    "C:\\Users\\KyFu\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.9\\system.diagnostics.eventlog.9.0.9.nupkg.sha512",
+    "C:\\Users\\KyFu\\.nuget\\packages\\system.management\\8.0.0\\system.management.8.0.0.nupkg.sha512",
+    "C:\\Users\\KyFu\\.nuget\\packages\\system.serviceprocess.servicecontroller\\9.0.9\\system.serviceprocess.servicecontroller.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

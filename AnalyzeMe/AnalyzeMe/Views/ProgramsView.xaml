@@ -1,0 +1,364 @@
+﻿<Page x:Class="AnalyzeMe.Views.ProgramsView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:conv="clr-namespace:AnalyzeMe.Converters"
+      mc:Ignorable="d"
+      d:DesignHeight="750" d:DesignWidth="1250"
+      Background="Transparent">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Margin="25,25,25,15">
+            <TextBlock Text="PROGRAMS MANAGEMENT"
+                     Style="{StaticResource TitleText}"
+                     Margin="0,0,0,20"/>
+
+            <!-- Tab Selection -->
+            <StackPanel Orientation="Horizontal">
+                <RadioButton x:Name="InstalledProgramsTab"
+                           Content="📦 INSTALLED PROGRAMS"
+                           Style="{StaticResource NavButton}"
+                           IsChecked="True"
+                           Checked="TabButton_Checked"
+                           Margin="0,0,12,0"/>
+                <RadioButton x:Name="StartupProgramsTab"
+                           Content="🚀 STARTUP"
+                           Style="{StaticResource NavButton}"
+                           Checked="TabButton_Checked"
+                           Margin="0,0,12,0"/>
+                <RadioButton x:Name="ServicesTab"
+                           Content="⚙️ SERVICES"
+                           Style="{StaticResource NavButton}"
+                           Checked="TabButton_Checked"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Content Area -->
+        <Border Grid.Row="1" Margin="25,0,25,25">
+            <Grid>
+
+                <!-- Installed Programs View -->
+                <Border x:Name="InstalledProgramsView"
+                        Style="{StaticResource CyberCard}"
+                        Visibility="Visible">
+                    <StackPanel>
+                        <Grid Margin="0,0,0,20">
+                            <TextBlock Text="INSTALLED APPLICATIONS"
+                                     FontFamily="Consolas"
+                                     FontSize="24"
+                                     FontWeight="Bold"
+                                     Foreground="#00ffff"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <TextBlock x:Name="ProgramCountText"
+                                         Text="0 programs"
+                                         FontFamily="Consolas"
+                                         FontSize="17"
+                                         Foreground="#6a7a8a"
+                                         VerticalAlignment="Center"
+                                         Margin="0,0,15,0"/>
+                                <Button Content="🔄 REFRESH"
+                                      Style="{StaticResource CyberButton}"
+                                      Click="RefreshPrograms_Click"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <TextBox x:Name="ProgramSearchBox"
+                               FontFamily="Consolas"
+                               FontSize="17"
+                               Foreground="#ffffff"
+                               Background="#1a1f2e"
+                               BorderBrush="#00ffff"
+                               BorderThickness="1"
+                               Padding="12"
+                               Margin="0,0,0,15"
+                               TextChanged="ProgramSearchBox_TextChanged">
+                            <TextBox.Style>
+                                <Style TargetType="TextBox">
+                                    <Style.Triggers>
+                                        <Trigger Property="Text" Value="">
+                                            <Setter Property="Background">
+                                                <Setter.Value>
+                                                    <VisualBrush Stretch="None" AlignmentX="Left">
+                                                        <VisualBrush.Visual>
+                                                            <TextBlock Text="🔍 Search programs..."
+                                                                     FontFamily="Consolas"
+                                                                     FontSize="17"
+                                                                     Foreground="#6a7a8a"
+                                                                     Margin="12,0,0,0"/>
+                                                        </VisualBrush.Visual>
+                                                    </VisualBrush>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+
+                        <ListView x:Name="ProgramsListView"
+                                Style="{StaticResource CyberListView}"
+                                Height="450"
+                                SelectionMode="Single">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0">
+                                            <TextBlock Text="{Binding Name, Mode=OneWay}"
+                                                     Foreground="#ffffff"
+                                                     FontFamily="Consolas"
+                                                     FontWeight="Bold"
+                                                     FontSize="18"/>
+                                            <TextBlock FontFamily="Consolas" FontSize="15" Foreground="#6a7a8a" Margin="0,5,0,0">
+												<Run Text="Version: "/>
+												<Run Text="{Binding Version, Mode=OneWay}"/>
+												<Run Text=" | Publisher: "/>
+												<Run Text="{Binding Publisher, Mode=OneWay}"/>
+												<Run Text=" | Size: "/>
+												<Run Text="{Binding DisplaySize, Mode=OneWay}"/>
+                                            </TextBlock>
+                                        </StackPanel>
+
+                                        <Button Grid.Column="1"
+                                              Content="🗑️ UNINSTALL"
+                                              Style="{StaticResource CyberButton}"
+                                              Click="UninstallProgram_Click"
+                                              Tag="{Binding}"
+                                              VerticalAlignment="Center"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                </Border>
+
+                <!-- Startup Programs View -->
+                <Border x:Name="StartupProgramsView"
+                        Style="{StaticResource CyberCard}"
+                        Visibility="Collapsed">
+                    <StackPanel>
+                        <Grid Margin="0,0,0,20">
+                            <TextBlock Text="STARTUP PROGRAMS"
+                                     FontFamily="Consolas"
+                                     FontSize="24"
+                                     FontWeight="Bold"
+                                     Foreground="#00ffff"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <TextBlock x:Name="StartupCountText"
+                                         Text="0 programs"
+                                         FontFamily="Consolas"
+                                         FontSize="17"
+                                         Foreground="#6a7a8a"
+                                         VerticalAlignment="Center"
+                                         Margin="0,0,15,0"/>
+                                <Button Content="🔄 REFRESH"
+                                      Style="{StaticResource CyberButton}"
+                                      Click="RefreshStartup_Click"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <TextBlock Text="⚠️ Disabling startup programs can improve boot time and reduce resource usage."
+                                 FontFamily="Consolas"
+                                 FontSize="15"
+                                 Foreground="#ffaa00"
+                                 TextWrapping="Wrap"
+                                 Margin="0,0,0,15"/>
+
+                        <ListView x:Name="StartupListView"
+                                Style="{StaticResource CyberListView}"
+                                Height="450"
+                                SelectionMode="Single">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0">
+                                            <TextBlock Text="{Binding Name, Mode=OneWay}"
+                                                     Foreground="#ffffff"
+                                                     FontFamily="Consolas"
+                                                     FontWeight="Bold"
+                                                     FontSize="18"/>
+                                            <TextBlock Text="{Binding Command, Mode=OneWay}"
+                                                     FontFamily="Consolas"
+                                                     FontSize="14"
+                                                     Foreground="#6a7a8a"
+                                                     Margin="0,5,0,0"
+                                                     TextWrapping="Wrap"/>
+                                            <TextBlock FontFamily="Consolas" FontSize="13" Foreground="#6a7a8a" Margin="0,3,0,0">
+												<Run Text="Location: "/>
+												<Run Text="{Binding Location, Mode=OneWay}"/>
+                                            </TextBlock>
+                                        </StackPanel>
+
+                                        <Button Grid.Column="1"
+                                              Content="🚫 DISABLE"
+                                              Style="{StaticResource CyberButton}"
+                                              Click="DisableStartup_Click"
+                                              Tag="{Binding}"
+                                              VerticalAlignment="Center"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                </Border>
+
+                <!-- UPDATED SERVICES VIEW -->
+                <Border x:Name="ServicesView" 
+                        Style="{StaticResource CyberCard}" 
+                        Visibility="Collapsed">
+                    <StackPanel>
+                        <Grid Margin="0,0,0,20">
+                            <TextBlock Text="WINDOWS SERVICES" 
+                                     FontFamily="Consolas"
+                                     FontSize="24" 
+                                     FontWeight="Bold"
+                                     Foreground="#00ffff"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <TextBlock x:Name="ServiceCountText"
+                                         Text="0 services"
+                                         FontFamily="Consolas"
+                                         FontSize="17"
+                                         Foreground="#6a7a8a"
+                                         VerticalAlignment="Center"
+                                         Margin="0,0,15,0"/>
+                                <Button Content="🔄 REFRESH" 
+                                      Style="{StaticResource CyberButton}"
+                                      Click="RefreshServices_Click"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <TextBlock Text="⚠️ WARNING: Modifying services can affect system stability. Only change services you understand."
+                                 FontFamily="Consolas"
+                                 FontSize="15"
+                                 Foreground="#ff0000"
+                                 TextWrapping="Wrap"
+                                 Margin="0,0,0,15"/>
+
+                        <TextBox x:Name="ServiceSearchBox"
+                               FontFamily="Consolas"
+                               FontSize="17"
+                               Foreground="#ffffff"
+                               Background="#1a1f2e"
+                               BorderBrush="#00ffff"
+                               BorderThickness="1"
+                               Padding="12"
+                               Margin="0,0,0,15"
+                               TextChanged="ServiceSearchBox_TextChanged">
+                            <TextBox.Style>
+                                <Style TargetType="TextBox">
+                                    <Style.Triggers>
+                                        <Trigger Property="Text" Value="">
+                                            <Setter Property="Background">
+                                                <Setter.Value>
+                                                    <VisualBrush Stretch="None" AlignmentX="Left">
+                                                        <VisualBrush.Visual>
+                                                            <TextBlock Text="🔍 Search services..." 
+                                                                     FontFamily="Consolas"
+                                                                     FontSize="17"
+                                                                     Foreground="#6a7a8a" 
+                                                                     Margin="12,0,0,0"/>
+                                                        </VisualBrush.Visual>
+                                                    </VisualBrush>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+
+                        <ListView x:Name="ServicesListView"
+                                Style="{StaticResource CyberListView}"
+                                Height="420"
+                                SelectionMode="Single">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="0,10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="280"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0">
+                                            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                                                <TextBlock Text="{Binding DisplayName, Mode=OneWay}" 
+                                                         Foreground="#ffffff"
+                                                         FontFamily="Consolas"
+                                                         FontWeight="Bold"
+                                                         FontSize="18"/>
+                                                <Border Background="#1a1f2e"
+                                                      CornerRadius="3"
+                                                      Padding="8,4"
+                                                      Margin="12,0,0,0">
+                                                    <TextBlock Text="{Binding Status, Mode=OneWay}"
+                                                             FontFamily="Consolas"
+                                                             FontSize="13"
+                                                             FontWeight="Bold"
+                                                             Foreground="#00ffff"/>
+                                                </Border>
+                                            </StackPanel>
+
+                                            <TextBlock FontFamily="Consolas" FontSize="15" Foreground="#6a7a8a" Margin="0,0,0,5">
+												<Run Text="Service Name: "/><Run Text="{Binding Name, Mode=OneWay}"/>
+												<Run Text=" | Startup: "/><Run Text="{Binding StartupType, Mode=OneWay}" Foreground="#00ffff"/>
+                                            </TextBlock>
+
+                                            <TextBlock Text="{Binding Description, Mode=OneWay}"
+                                                     FontFamily="Consolas" 
+                                                     FontSize="14" 
+                                                     Foreground="#999999" 
+                                                     TextWrapping="Wrap"
+                                                     MaxHeight="50"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="1" 
+                                                  Orientation="Horizontal" 
+                                                  VerticalAlignment="Center"
+                                                  HorizontalAlignment="Right">
+                                            <ComboBox Width="140"
+                                                    FontFamily="Consolas"
+                                                    FontSize="15"
+                                                    Foreground="#ffffff"
+                                                    Background="#1a1f2e"
+                                                    BorderBrush="#00ffff"
+                                                    BorderThickness="1"
+                                                    Margin="0,0,10,0"
+                                                    x:Name="ServiceStartupCombo"
+                                                    Tag="{Binding}">
+                                                <ComboBoxItem Content="Automatic" IsSelected="{Binding StartupType, Mode=OneWay, Converter={StaticResource EqualityConverter}, ConverterParameter=Automatic}"/>
+                                                <ComboBoxItem Content="Manual" IsSelected="{Binding StartupType, Mode=OneWay, Converter={StaticResource EqualityConverter}, ConverterParameter=Manual}"/>
+                                                <ComboBoxItem Content="Disabled" IsSelected="{Binding StartupType, Mode=OneWay, Converter={StaticResource EqualityConverter}, ConverterParameter=Disabled}"/>
+                                            </ComboBox>
+                                            <Button Content="✓ APPLY"
+                                                  Style="{StaticResource CyberButton}"
+                                                  Click="ChangeServiceStartup_Click"
+                                                  Tag="{Binding}"
+                                                  Width="110"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                </Border>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

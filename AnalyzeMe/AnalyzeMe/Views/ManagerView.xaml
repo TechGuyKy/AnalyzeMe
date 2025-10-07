@@ -1,0 +1,412 @@
+﻿<Page x:Class="AnalyzeMe.Views.ManagerView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="1250"
+      Background="Transparent">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="25">
+        <StackPanel>
+            <TextBlock Text="PROCESS MANAGER" 
+                     Style="{StaticResource TitleText}"
+                     Margin="0,0,0,20"/>
+
+            <!-- Quick Stats -->
+            <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" Style="{StaticResource MetricCard}">
+                    <StackPanel>
+                        <TextBlock Text="⚙️ PROCESSES" 
+                                 FontSize="17" 
+                                 FontFamily="Consolas"
+                                 Foreground="#00ffff" 
+                                 Margin="0,0,0,10"/>
+                        <TextBlock x:Name="ProcessCountText" 
+                                 Text="0" 
+                                 FontSize="36"
+                                 FontFamily="Consolas"
+                                 FontWeight="Bold"
+                                 Foreground="#00ffff"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="1" Style="{StaticResource MetricCard}">
+                    <StackPanel>
+                        <TextBlock Text="🧵 THREADS" 
+                                 FontSize="17" 
+                                 FontFamily="Consolas"
+                                 Foreground="#ff00ff" 
+                                 Margin="0,0,0,10"/>
+                        <TextBlock x:Name="ThreadCountText" 
+                                 Text="0" 
+                                 FontSize="36"
+                                 FontFamily="Consolas"
+                                 FontWeight="Bold"
+                                 Foreground="#ff00ff"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="2" Style="{StaticResource MetricCard}">
+                    <StackPanel>
+                        <TextBlock Text="🔧 HANDLES" 
+                                 FontSize="17" 
+                                 FontFamily="Consolas"
+                                 Foreground="#ffaa00" 
+                                 Margin="0,0,0,10"/>
+                        <TextBlock x:Name="HandleCountText" 
+                                 Text="0" 
+                                 FontSize="36"
+                                 FontFamily="Consolas"
+                                 FontWeight="Bold"
+                                 Foreground="#ffaa00"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="3" Style="{StaticResource MetricCard}">
+                    <StackPanel>
+                        <TextBlock Text="💾 RAM USED" 
+                                 FontSize="17" 
+                                 FontFamily="Consolas"
+                                 Foreground="#9d00ff" 
+                                 Margin="0,0,0,10"/>
+                        <TextBlock x:Name="TotalRamUsedText" 
+                                 Text="0 GB" 
+                                 FontSize="36"
+                                 FontFamily="Consolas"
+                                 FontWeight="Bold"
+                                 Foreground="#9d00ff"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <!-- Controls -->
+            <Border Style="{StaticResource CyberCard}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox x:Name="SearchBox"
+                           Grid.Column="0"
+                           FontFamily="Consolas"
+                           FontSize="17"
+                           Foreground="#ffffff"
+                           Background="#1a1f2e"
+                           BorderBrush="#00ffff"
+                           BorderThickness="1"
+                           Padding="12"
+                           TextChanged="SearchBox_TextChanged">
+                        <TextBox.Style>
+                            <Style TargetType="TextBox">
+                                <Style.Triggers>
+                                    <Trigger Property="Text" Value="">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <VisualBrush Stretch="None" AlignmentX="Left">
+                                                    <VisualBrush.Visual>
+                                                        <TextBlock Text="🔍 Search processes..." 
+                                                                 FontFamily="Consolas"
+                                                                 FontSize="17"
+                                                                 Foreground="#6a7a8a" 
+                                                                 Margin="12,0,0,0"/>
+                                                    </VisualBrush.Visual>
+                                                </VisualBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBox.Style>
+                    </TextBox>
+
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="15,0,0,0">
+                        <Button Content="🔄 REFRESH" 
+                              Style="{StaticResource CyberButton}"
+                              Click="RefreshButton_Click"
+                              Margin="0,0,10,0"/>
+                        <Button x:Name="EndTaskButton"
+                              Content="🎯 END TASK" 
+                              Style="{StaticResource CyberButton}"
+                              Click="EndTaskButton_Click"
+                              IsEnabled="False"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Process List -->
+            <Border Style="{StaticResource CyberCard}" Margin="0,25,0,0">
+                <StackPanel>
+                    <TextBlock Text="RUNNING PROCESSES"
+                             FontFamily="Consolas"
+                             FontSize="20"
+                             FontWeight="Bold"
+                             Foreground="#00ffff"
+                             Margin="0,0,0,15"/>
+
+                    <ListView x:Name="ProcessListView"
+                            Height="450"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            SelectionMode="Single"
+                            SelectionChanged="ProcessListView_SelectionChanged"
+                            MouseDoubleClick="ProcessListView_MouseDoubleClick"
+                            ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                        <ListView.Resources>
+                            <!-- Hide GridView headers default style -->
+                            <Style TargetType="GridViewColumnHeader">
+                                <Setter Property="Background" Value="#1a1f2e"/>
+                                <Setter Property="Foreground" Value="#00ffff"/>
+                                <Setter Property="FontFamily" Value="Consolas"/>
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="Padding" Value="10,8"/>
+                                <Setter Property="BorderBrush" Value="#00ffff"/>
+                                <Setter Property="BorderThickness" Value="0,0,0,2"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="GridViewColumnHeader">
+                                            <Border Background="{TemplateBinding Background}"
+                                                  BorderBrush="{TemplateBinding BorderBrush}"
+                                                  BorderThickness="{TemplateBinding BorderThickness}"
+                                                  Padding="{TemplateBinding Padding}">
+                                                <TextBlock Text="{TemplateBinding Content}"
+                                                         FontFamily="{TemplateBinding FontFamily}"
+                                                         FontSize="{TemplateBinding FontSize}"
+                                                         FontWeight="{TemplateBinding FontWeight}"
+                                                         Foreground="{TemplateBinding Foreground}"
+                                                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListView.Resources>
+
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Foreground" Value="#ffffff"/>
+                                <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                <Setter Property="BorderBrush" Value="#1a1f2e"/>
+                                <Setter Property="Padding" Value="10,8"/>
+                                <Setter Property="Margin" Value="0"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ListViewItem">
+                                            <Border Background="{TemplateBinding Background}"
+                                                  BorderBrush="{TemplateBinding BorderBrush}"
+                                                  BorderThickness="{TemplateBinding BorderThickness}"
+                                                  Padding="{TemplateBinding Padding}">
+                                                <GridViewRowPresenter Content="{TemplateBinding Content}"
+                                                                    Columns="{TemplateBinding GridView.ColumnCollection}"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                                    <GradientStop Color="#00ffff" Offset="0"/>
+                                                    <GradientStop Color="#0099aa" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="Foreground" Value="#000000"/>
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#1a1f2e"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Process" Width="200">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Ellipse Width="8" Height="8" 
+                                                       Fill="{Binding StatusColor}" 
+                                                       Margin="0,0,10,0"
+                                                       VerticalAlignment="Center"/>
+                                                <TextBlock FontFamily="Consolas"
+                                                         FontSize="15"
+                                                         FontWeight="Bold"
+                                                         Text="{Binding Name}"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="PID" Width="80">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock FontFamily="Consolas"
+                                                     FontSize="14"
+                                                     Foreground="#6a7a8a"
+                                                     Text="{Binding ProcessId}"
+                                                     TextAlignment="Right"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="CPU" Width="90">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Border Background="#001a1a" 
+                                                  CornerRadius="3" 
+                                                  Padding="6,2">
+                                                <TextBlock FontFamily="Consolas"
+                                                         FontSize="14"
+                                                         Foreground="#00ffff"
+                                                         FontWeight="Bold"
+                                                         Text="{Binding CpuUsageDisplay}"
+                                                         TextAlignment="Right"/>
+                                            </Border>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Memory" Width="120">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Border Background="#1a001a" 
+                                                  CornerRadius="3" 
+                                                  Padding="6,2">
+                                                <TextBlock FontFamily="Consolas"
+                                                         FontSize="14"
+                                                         Foreground="#ff00ff"
+                                                         FontWeight="Bold"
+                                                         Text="{Binding MemoryDisplay}"
+                                                         TextAlignment="Right"/>
+                                            </Border>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Threads" Width="90">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock FontFamily="Consolas"
+                                                     FontSize="14"
+                                                     Foreground="#ffaa00"
+                                                     Text="{Binding ThreadCount}"
+                                                     TextAlignment="Right"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Priority" Width="120">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Border Background="#0f0015" 
+                                                  CornerRadius="3" 
+                                                  Padding="6,2"
+                                                  BorderBrush="#9d00ff"
+                                                  BorderThickness="1">
+                                                <TextBlock FontFamily="Consolas"
+                                                         FontSize="13"
+                                                         Foreground="#9d00ff"
+                                                         Text="{Binding PriorityClass}"
+                                                         TextAlignment="Center"/>
+                                            </Border>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Description" Width="280">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock FontFamily="Consolas"
+                                                     FontSize="13"
+                                                     Foreground="#999999"
+                                                     Text="{Binding Description}"
+                                                     TextTrimming="CharacterEllipsis"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+
+                        <ListView.ContextMenu>
+                            <ContextMenu Background="#0f1419" 
+                                       BorderBrush="#00ffff"
+                                       BorderThickness="2">
+                                <ContextMenu.Effect>
+                                    <DropShadowEffect Color="#00ffff" BlurRadius="10" ShadowDepth="0" Opacity="0.5"/>
+                                </ContextMenu.Effect>
+
+                                <MenuItem Header="🎯 End Task" 
+                                        Click="EndTaskMenuItem_Click" 
+                                        Foreground="#ffffff" 
+                                        FontFamily="Consolas"
+                                        FontSize="14"
+                                        Padding="10,5"/>
+                                <Separator Background="#1a1f2e"/>
+                                <MenuItem Header="⏸️ Suspend Process" 
+                                        Click="SuspendMenuItem_Click" 
+                                        Foreground="#ffffff" 
+                                        FontFamily="Consolas"
+                                        FontSize="14"
+                                        Padding="10,5"/>
+                                <MenuItem Header="▶️ Resume Process" 
+                                        Click="ResumeMenuItem_Click" 
+                                        Foreground="#ffffff" 
+                                        FontFamily="Consolas"
+                                        FontSize="14"
+                                        Padding="10,5"/>
+                                <Separator Background="#1a1f2e"/>
+                                <MenuItem Header="🔧 Set Priority" 
+                                        Foreground="#00ffff" 
+                                        FontFamily="Consolas"
+                                        FontSize="14"
+                                        Padding="10,5">
+                                    <MenuItem Header="⚡ Realtime" Click="SetPriorityMenuItem_Click" Tag="Realtime" 
+                                            Foreground="#ff0000" FontFamily="Consolas" Padding="8,4"/>
+                                    <MenuItem Header="🔺 High" Click="SetPriorityMenuItem_Click" Tag="High" 
+                                            Foreground="#ff00ff" FontFamily="Consolas" Padding="8,4"/>
+                                    <MenuItem Header="↗️ Above Normal" Click="SetPriorityMenuItem_Click" Tag="Above Normal" 
+                                            Foreground="#00ffff" FontFamily="Consolas" Padding="8,4"/>
+                                    <MenuItem Header="➡️ Normal" Click="SetPriorityMenuItem_Click" Tag="Normal" 
+                                            Foreground="#ffffff" FontFamily="Consolas" Padding="8,4"/>
+                                    <MenuItem Header="↘️ Below Normal" Click="SetPriorityMenuItem_Click" Tag="Below Normal" 
+                                            Foreground="#6a7a8a" FontFamily="Consolas" Padding="8,4"/>
+                                    <MenuItem Header="🔻 Idle" Click="SetPriorityMenuItem_Click" Tag="Idle" 
+                                            Foreground="#4a5a6a" FontFamily="Consolas" Padding="8,4"/>
+                                </MenuItem>
+                                <Separator Background="#1a1f2e"/>
+                                <MenuItem Header="📂 Open File Location" 
+                                        Click="OpenLocationMenuItem_Click" 
+                                        Foreground="#ffffff" 
+                                        FontFamily="Consolas"
+                                        FontSize="14"
+                                        Padding="10,5"/>
+                                <MenuItem Header="ℹ️ Properties" 
+                                        Click="PropertiesMenuItem_Click" 
+                                        Foreground="#ffffff" 
+                                        FontFamily="Consolas"
+                                        FontSize="14"
+                                        Padding="10,5"/>
+                            </ContextMenu>
+                        </ListView.ContextMenu>
+                    </ListView>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

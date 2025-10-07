@@ -1,0 +1,391 @@
+﻿<Page x:Class="AnalyzeMe.Views.NetworkView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      d:DesignHeight="750" d:DesignWidth="1250"
+      Background="Transparent">
+
+	<ScrollViewer VerticalScrollBarVisibility="Auto" Padding="25">
+		<StackPanel>
+			<TextBlock Text="NETWORK BANDWIDTH"
+                     Style="{StaticResource TitleText}"
+                     Margin="0,0,0,25"/>
+
+			<!-- Connection Status -->
+			<Grid Margin="0,0,0,25">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+
+				<Border Grid.Column="0" Style="{StaticResource MetricCard}">
+					<StackPanel>
+						<TextBlock Text="📡 CONNECTION"
+                                 FontSize="19"
+                                 FontFamily="Consolas"
+                                 Foreground="#00ffff"
+                                 Margin="0,0,0,12"/>
+						<TextBlock x:Name="ConnectionStatusText"
+                                 Text="Select adapter"
+                                 FontSize="28"
+                                 FontFamily="Consolas"
+                                 FontWeight="Bold"
+                                 Foreground="#ffaa00"/>
+						<TextBlock x:Name="AdapterNameText"
+                                 Text="--"
+                                 FontFamily="Consolas"
+                                 FontSize="15"
+                                 Foreground="#6a7a8a"
+                                 Margin="0,8,0,0"
+                                 TextWrapping="Wrap"/>
+					</StackPanel>
+				</Border>
+
+				<Border Grid.Column="1" Style="{StaticResource MetricCard}">
+					<StackPanel>
+						<TextBlock Text="🔌 TYPE"
+                                 FontSize="19"
+                                 FontFamily="Consolas"
+                                 Foreground="#ff00ff"
+                                 Margin="0,0,0,12"/>
+						<TextBlock x:Name="ConnectionTypeText"
+                                 Text="--"
+                                 FontSize="28"
+                                 FontFamily="Consolas"
+                                 FontWeight="Bold"
+                                 Foreground="#ff00ff"/>
+					</StackPanel>
+				</Border>
+			</Grid>
+
+			<!-- Speed Test Section -->
+			<Border Style="{StaticResource CyberCard}" Margin="0,0,0,25">
+				<StackPanel>
+					<Grid Margin="0,0,0,20">
+						<TextBlock Text="INTERNET SPEED TEST"
+                                 FontFamily="Consolas"
+                                 FontSize="24"
+                                 FontWeight="Bold"
+                                 Foreground="#00ffff"/>
+						<Button x:Name="SpeedTestButton"
+                              Content="🚀 RUN SPEED TEST"
+                              Style="{StaticResource CyberButton}"
+                              HorizontalAlignment="Right"
+                              Click="SpeedTestButton_Click"/>
+					</Grid>
+
+					<!-- Progress Bar -->
+					<ProgressBar x:Name="SpeedTestProgressBar"
+                               Style="{StaticResource CyberProgressBar}"
+                               Margin="0,0,0,20"
+                               Height="20"
+                               Visibility="Collapsed"/>
+
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="200"/>
+						</Grid.ColumnDefinitions>
+
+						<!-- Download Speed Result -->
+						<StackPanel Grid.Column="0" Margin="0,0,15,0">
+							<TextBlock Text="⬇️ DOWNLOAD"
+                                     Style="{StaticResource SubtitleText}"
+                                     Margin="0,0,0,10"/>
+							<TextBlock x:Name="SpeedTestDownloadText"
+                                     Text="-- Mbps"
+                                     FontSize="48"
+                                     FontFamily="Consolas"
+                                     FontWeight="Bold"
+                                     Foreground="#00ffff"
+                                     HorizontalAlignment="Center"
+                                     Margin="0,10"/>
+							<TextBlock x:Name="SpeedTestDownloadStatusText"
+                                     Text="Click 'Run Speed Test'"
+                                     FontFamily="Consolas"
+                                     FontSize="15"
+                                     Foreground="#6a7a8a"
+                                     HorizontalAlignment="Center"
+                                     TextWrapping="Wrap"/>
+						</StackPanel>
+
+						<!-- Upload Speed Result -->
+						<StackPanel Grid.Column="1" Margin="15,0">
+							<TextBlock Text="⬆️ UPLOAD"
+                                     Style="{StaticResource SubtitleText}"
+                                     Margin="0,0,0,10"/>
+							<TextBlock x:Name="SpeedTestUploadText"
+                                     Text="-- Mbps"
+                                     FontSize="48"
+                                     FontFamily="Consolas"
+                                     FontWeight="Bold"
+                                     Foreground="#ff00ff"
+                                     HorizontalAlignment="Center"
+                                     Margin="0,10"/>
+							<TextBlock x:Name="SpeedTestUploadStatusText"
+                                     Text="Click 'Run Speed Test'"
+                                     FontFamily="Consolas"
+                                     FontSize="15"
+                                     Foreground="#6a7a8a"
+                                     HorizontalAlignment="Center"
+                                     TextWrapping="Wrap"/>
+						</StackPanel>
+
+						<!-- Ping Result -->
+						<StackPanel Grid.Column="2" Margin="15,0,0,0">
+							<TextBlock Text="⏱️ PING"
+                                     Style="{StaticResource SubtitleText}"
+                                     Margin="0,0,0,10"/>
+							<TextBlock x:Name="SpeedTestPingText"
+                                     Text="-- ms"
+                                     FontSize="36"
+                                     FontFamily="Consolas"
+                                     FontWeight="Bold"
+                                     Foreground="#ffaa00"
+                                     HorizontalAlignment="Center"
+                                     Margin="0,10"/>
+						</StackPanel>
+					</Grid>
+
+					<!-- Server Info -->
+					<Border Background="#1a1f2e"
+                          CornerRadius="5"
+                          Padding="15"
+                          Margin="0,20,0,0">
+						<TextBlock x:Name="SpeedTestServerText"
+                                 Text="Test server info will appear here"
+                                 FontFamily="Consolas"
+                                 FontSize="15"
+                                 Foreground="#6a7a8a"
+                                 TextWrapping="Wrap"
+                                 HorizontalAlignment="Center"/>
+					</Border>
+				</StackPanel>
+			</Border>
+
+			<!-- Network Adapter Selection -->
+			<Border Style="{StaticResource CyberCard}" Margin="0,0,0,25">
+				<StackPanel>
+					<Grid Margin="0,0,0,15">
+						<TextBlock Text="🔌 NETWORK ADAPTERS"
+                                 FontFamily="Consolas"
+                                 FontSize="24"
+                                 FontWeight="Bold"
+                                 Foreground="#00ffff"/>
+						<Button x:Name="RefreshAdaptersButton"
+                              Content="🔄 REFRESH"
+                              Style="{StaticResource CyberButton}"
+                              HorizontalAlignment="Right"
+                              Click="RefreshAdaptersButton_Click"
+                              Padding="15,8"
+                              FontSize="15"/>
+					</Grid>
+
+					<TextBlock Text="Select an adapter to monitor:"
+                             FontFamily="Consolas"
+                             FontSize="15"
+                             Foreground="#6a7a8a"
+                             Margin="0,0,0,10"/>
+
+					<ListView x:Name="AdapterListView"
+                            Style="{StaticResource CyberListView}"
+                            SelectionMode="Single"
+                            SelectionChanged="AdapterListView_SelectionChanged"
+                            MaxHeight="300">
+						<ListView.ItemTemplate>
+							<DataTemplate>
+								<Grid Margin="0,5">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="40"/>
+										<ColumnDefinition Width="*"/>
+										<ColumnDefinition Width="Auto"/>
+									</Grid.ColumnDefinitions>
+
+									<!-- Icon -->
+									<TextBlock Grid.Column="0"
+                                             Text="{Binding Icon}"
+                                             FontSize="24"
+                                             VerticalAlignment="Center"/>
+
+									<!-- Adapter Info -->
+									<StackPanel Grid.Column="1" Margin="15,0">
+										<TextBlock Text="{Binding Name}"
+                                                 FontFamily="Consolas"
+                                                 FontSize="17"
+                                                 FontWeight="Bold"
+                                                 Foreground="#00ffff"/>
+										<TextBlock Text="{Binding Description}"
+                                                 FontFamily="Consolas"
+                                                 FontSize="14"
+                                                 Foreground="#6a7a8a"
+                                                 TextWrapping="Wrap"
+                                                 Margin="0,3,0,0"/>
+										<StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+											<TextBlock Text="{Binding Type}"
+                                                     FontFamily="Consolas"
+                                                     FontSize="13"
+                                                     Foreground="#ff00ff"
+                                                     Margin="0,0,15,0"/>
+											<TextBlock Text="{Binding Speed}"
+                                                     FontFamily="Consolas"
+                                                     FontSize="13"
+                                                     Foreground="#ffaa00"/>
+										</StackPanel>
+									</StackPanel>
+
+									<!-- Status Badge -->
+									<Border Grid.Column="2"
+                                          Background="{Binding StatusColor}"
+                                          CornerRadius="3"
+                                          Padding="10,5"
+                                          VerticalAlignment="Center">
+										<TextBlock Text="{Binding Status}"
+                                                 FontFamily="Consolas"
+                                                 FontSize="13"
+                                                 FontWeight="Bold"
+                                                 Foreground="#0a0e1a"/>
+									</Border>
+								</Grid>
+							</DataTemplate>
+						</ListView.ItemTemplate>
+					</ListView>
+
+					<TextBlock x:Name="SelectedAdapterText"
+                             Text="No adapter selected"
+                             FontFamily="Consolas"
+                             FontSize="15"
+                             Foreground="#6a7a8a"
+                             Margin="0,15,0,0"
+                             HorizontalAlignment="Center"/>
+				</StackPanel>
+			</Border>
+
+			<!-- Real-time Bandwidth Monitor -->
+			<Border Style="{StaticResource CyberCard}" Margin="0,0,0,25">
+				<StackPanel>
+					<TextBlock Text="REAL-TIME NETWORK ACTIVITY"
+                             FontFamily="Consolas"
+                             FontSize="24"
+                             FontWeight="Bold"
+                             Foreground="#00ffff"
+                             Margin="0,0,0,20"/>
+
+					<!-- Download Activity -->
+					<StackPanel Margin="0,0,0,25">
+						<Grid>
+							<TextBlock Text="⬇️ CURRENT DOWNLOAD" Style="{StaticResource SubtitleText}"/>
+							<TextBlock x:Name="DownloadSpeedText" Text="0.00 Mbps"
+                                     HorizontalAlignment="Right"
+                                     Foreground="#00ffff"
+                                     FontFamily="Consolas"
+                                     FontSize="24"
+                                     FontWeight="Bold"/>
+						</Grid>
+						<ProgressBar x:Name="DownloadProgressBar"
+                                   Style="{StaticResource CyberProgressBar}"
+                                   Margin="0,10,0,0"
+                                   Value="0"
+                                   Maximum="100"/>
+						<TextBlock x:Name="DownloadStatusText"
+                                 Text="⏸️ Idle"
+                                 FontFamily="Consolas"
+                                 FontSize="15"
+                                 Foreground="#6a7a8a"
+                                 Margin="0,7,0,0"/>
+					</StackPanel>
+
+					<!-- Upload Activity -->
+					<StackPanel>
+						<Grid>
+							<TextBlock Text="⬆️ CURRENT UPLOAD" Style="{StaticResource SubtitleText}"/>
+							<TextBlock x:Name="UploadSpeedText" Text="0.00 Mbps"
+                                     HorizontalAlignment="Right"
+                                     Foreground="#ff00ff"
+                                     FontFamily="Consolas"
+                                     FontSize="24"
+                                     FontWeight="Bold"/>
+						</Grid>
+						<ProgressBar x:Name="UploadProgressBar"
+                                   Style="{StaticResource CyberProgressBar}"
+                                   Margin="0,10,0,0"
+                                   Value="0"
+                                   Maximum="100"
+                                   Foreground="#ff00ff"/>
+						<TextBlock x:Name="UploadStatusText"
+                                 Text="⏸️ Idle"
+                                 FontFamily="Consolas"
+                                 FontSize="15"
+                                 Foreground="#6a7a8a"
+                                 Margin="0,7,0,0"/>
+					</StackPanel>
+				</StackPanel>
+			</Border>
+
+			<!-- Total Data Transfer -->
+			<Border Style="{StaticResource CyberCard}" Margin="0,0,0,25">
+				<StackPanel>
+					<TextBlock Text="TOTAL DATA TRANSFER (SESSION)"
+                             FontFamily="Consolas"
+                             FontSize="24"
+                             FontWeight="Bold"
+                             Foreground="#00ffff"
+                             Margin="0,0,0,20"/>
+
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+
+						<StackPanel Grid.Column="0" Margin="0,0,25,0">
+							<TextBlock Text="Downloaded:" Style="{StaticResource SubtitleText}" Margin="0,7"/>
+							<TextBlock x:Name="TotalDownloadText"
+                                     Text="0.0 MB"
+                                     FontSize="43"
+                                     FontFamily="Consolas"
+                                     Foreground="#00ffff"
+                                     FontWeight="Bold"/>
+						</StackPanel>
+
+						<StackPanel Grid.Column="1">
+							<TextBlock Text="Uploaded:" Style="{StaticResource SubtitleText}" Margin="0,7"/>
+							<TextBlock x:Name="TotalUploadText"
+                                     Text="0.0 MB"
+                                     FontSize="43"
+                                     FontFamily="Consolas"
+                                     Foreground="#ff00ff"
+                                     FontWeight="Bold"/>
+						</StackPanel>
+					</Grid>
+				</StackPanel>
+			</Border>
+
+			<!-- Network Info -->
+			<Border Style="{StaticResource CyberCard}">
+				<StackPanel>
+					<TextBlock Text="💡 HOW TO USE"
+                             FontFamily="Consolas"
+                             FontSize="24"
+                             FontWeight="Bold"
+                             Foreground="#00ffff"
+                             Margin="0,0,0,20"/>
+
+					<TextBlock FontFamily="Consolas" FontSize="17" Foreground="#cccccc" TextWrapping="Wrap" LineHeight="32">
+						<Run Text="1. Select a network adapter from the list above" Foreground="#ffffff"/>
+						<LineBreak/>
+						<Run Text="2. Real-time monitoring will show current network activity" Foreground="#ffffff"/>
+						<LineBreak/>
+						<Run Text="3. Download/Upload values update every second" Foreground="#ffffff"/>
+						<LineBreak/>
+						<Run Text="4. Total transfer shows cumulative data for selected adapter" Foreground="#ffffff"/>
+						<LineBreak/>
+						<Run Text="5. Switch adapters anytime - metrics will reset automatically" Foreground="#6a7a8a"/>
+					</TextBlock>
+				</StackPanel>
+			</Border>
+		</StackPanel>
+	</ScrollViewer>
+</Page>

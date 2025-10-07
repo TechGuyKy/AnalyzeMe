@@ -1,0 +1,613 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\managerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\managerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\managerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\managerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\services\\processmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\services\\processmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\models\\taskprocessinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\models\\taskprocessinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\programsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\programsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\performanceview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\performanceview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\hardwareview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\hardwareview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\hardwareview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\hardwareview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\dashboardview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\dashboardview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\services\\systemanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\services\\systemanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\services\\speedtestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\services\\speedtestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\services\\programmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\services\\programmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\services\\networkmonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\services\\networkmonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\services\\diagnosticservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\services\\diagnosticservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\models\\programinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\models\\programinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\models\\networkmetrics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\models\\networkmetrics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\converters\\valueconverters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\converters\\valueconverters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\converters\\equalityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\converters\\equalityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\networkview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\networkview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\networkview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\networkview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\programsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\programsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\analyzeme.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\analyzeme.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\networkview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\networkview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\performanceview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\performanceview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\programsview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\programsview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\analyzeme.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\analyzeme.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\recommendationsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\recommendationsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\recommendationsview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\recommendationsview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\diagnosticsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\diagnosticsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|c:\\users\\kyfu\\source\\repos\\analyzeme\\analyzeme\\views\\dashboardview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9E56EBE6-0351-4A1D-A4BB-5EB8D814E7E5}|AnalyzeMe\\AnalyzeMe.csproj|solutionrelative:analyzeme\\views\\dashboardview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ManagerView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\ManagerView.xaml.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\ManagerView.xaml.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\ManagerView.xaml.cs",
+              "RelativeToolTip": "AnalyzeMe\\Views\\ManagerView.xaml.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAiwJEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T03:38:29.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ManagerView.xaml",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\ManagerView.xaml",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\ManagerView.xaml",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\ManagerView.xaml",
+              "RelativeToolTip": "AnalyzeMe\\Views\\ManagerView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-07T03:37:14.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProcessManager.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Services\\ProcessManager.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Services\\ProcessManager.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Services\\ProcessManager.cs",
+              "RelativeToolTip": "AnalyzeMe\\Services\\ProcessManager.cs",
+              "ViewState": "AQIAAM0AAAAAAAAAAAAiwOoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T03:22:13.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TaskProcessInfo.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Models\\TaskProcessInfo.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Models\\TaskProcessInfo.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Models\\TaskProcessInfo.cs",
+              "RelativeToolTip": "AnalyzeMe\\Models\\TaskProcessInfo.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAiwFcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T03:20:03.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\AssemblyInfo.cs",
+              "RelativeToolTip": "AnalyzeMe\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T03:16:10.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PerformanceView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\PerformanceView.xaml.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\PerformanceView.xaml.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\PerformanceView.xaml.cs",
+              "RelativeToolTip": "AnalyzeMe\\Views\\PerformanceView.xaml.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAADkAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T03:14:10.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HardwareView.xaml",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\HardwareView.xaml",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\HardwareView.xaml",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\HardwareView.xaml",
+              "RelativeToolTip": "AnalyzeMe\\Views\\HardwareView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-07T03:14:04.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "AnalyzeMe\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\MainWindow.xaml",
+              "RelativeToolTip": "AnalyzeMe\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-07T00:01:23.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\MainWindow.xaml.cs",
+              "RelativeToolTip": "AnalyzeMe\\MainWindow.xaml.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAE0AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T00:01:52.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HardwareView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\HardwareView.xaml.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\HardwareView.xaml.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\HardwareView.xaml.cs",
+              "RelativeToolTip": "AnalyzeMe\\Views\\HardwareView.xaml.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAADUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T03:13:31.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DashboardView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\DashboardView.xaml.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\DashboardView.xaml.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\DashboardView.xaml.cs",
+              "RelativeToolTip": "AnalyzeMe\\Views\\DashboardView.xaml.cs",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAAAHkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T03:12:09.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DashboardView.xaml",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\DashboardView.xaml",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\DashboardView.xaml",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\DashboardView.xaml",
+              "RelativeToolTip": "AnalyzeMe\\Views\\DashboardView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-07T03:10:28.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ProgramsView.xaml",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\ProgramsView.xaml",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\ProgramsView.xaml",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\ProgramsView.xaml",
+              "RelativeToolTip": "AnalyzeMe\\Views\\ProgramsView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-07T00:25:05.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "AnalyzeMe\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAAAHYAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T00:01:16.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProgramsView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\ProgramsView.xaml.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\ProgramsView.xaml.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\ProgramsView.xaml.cs",
+              "RelativeToolTip": "AnalyzeMe\\Views\\ProgramsView.xaml.cs",
+              "ViewState": "AQIAADIBAAAAAAAAAAAAAAoBAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T00:04:34.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\App.xaml",
+              "RelativeDocumentMoniker": "AnalyzeMe\\App.xaml",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\App.xaml",
+              "RelativeToolTip": "AnalyzeMe\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T23:59:46.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DiagnosticService.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Services\\DiagnosticService.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Services\\DiagnosticService.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Services\\DiagnosticService.cs",
+              "RelativeToolTip": "AnalyzeMe\\Services\\DiagnosticService.cs",
+              "ViewState": "AQIAAA4BAAAAAAAAAAAAAPIAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T02:53:32.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SystemAnalyzer.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Services\\SystemAnalyzer.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Services\\SystemAnalyzer.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Services\\SystemAnalyzer.cs",
+              "RelativeToolTip": "AnalyzeMe\\Services\\SystemAnalyzer.cs",
+              "ViewState": "AQIAAIkBAAAAAAAAAAAAAAEBAAB9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T03:08:25.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "NetworkView.xaml",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\NetworkView.xaml",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\NetworkView.xaml",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\NetworkView.xaml",
+              "RelativeToolTip": "AnalyzeMe\\Views\\NetworkView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-07T00:38:22.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "NetworkMetrics.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Models\\NetworkMetrics.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Models\\NetworkMetrics.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Models\\NetworkMetrics.cs",
+              "RelativeToolTip": "AnalyzeMe\\Models\\NetworkMetrics.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T00:00:05.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProgramInfo.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Models\\ProgramInfo.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Models\\ProgramInfo.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Models\\ProgramInfo.cs",
+              "RelativeToolTip": "AnalyzeMe\\Models\\ProgramInfo.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T00:00:18.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProgramManager.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Services\\ProgramManager.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Services\\ProgramManager.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Services\\ProgramManager.cs",
+              "RelativeToolTip": "AnalyzeMe\\Services\\ProgramManager.cs",
+              "ViewState": "AQIAAKoBAAAAAAAAAAAAAHkBAAB1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T00:00:46.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SpeedTestService.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Services\\SpeedTestService.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Services\\SpeedTestService.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Services\\SpeedTestService.cs",
+              "RelativeToolTip": "AnalyzeMe\\Services\\SpeedTestService.cs",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAAGwAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T00:37:52.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "NetworkMonitor.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Services\\NetworkMonitor.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Services\\NetworkMonitor.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Services\\NetworkMonitor.cs",
+              "RelativeToolTip": "AnalyzeMe\\Services\\NetworkMonitor.cs",
+              "ViewState": "AQIAAPwAAAAAAAAAAAAAAOcAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T00:00:36.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ValueConverters.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Converters\\ValueConverters.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Converters\\ValueConverters.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Converters\\ValueConverters.cs",
+              "RelativeToolTip": "AnalyzeMe\\Converters\\ValueConverters.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T02:51:51.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\App.xaml.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\App.xaml.cs",
+              "RelativeToolTip": "AnalyzeMe\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T23:59:41.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "NetworkView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\NetworkView.xaml.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\NetworkView.xaml.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\NetworkView.xaml.cs",
+              "RelativeToolTip": "AnalyzeMe\\Views\\NetworkView.xaml.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAiwL8BAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T00:02:55.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "EqualityConverter.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Converters\\EqualityConverter.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Converters\\EqualityConverter.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Converters\\EqualityConverter.cs",
+              "RelativeToolTip": "AnalyzeMe\\Converters\\EqualityConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T01:48:05.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PerformanceView.xaml",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\PerformanceView.xaml",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\PerformanceView.xaml",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\PerformanceView.xaml",
+              "RelativeToolTip": "AnalyzeMe\\Views\\PerformanceView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-07T00:13:13.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AnalyzeMe.csproj",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\AnalyzeMe.csproj",
+              "RelativeDocumentMoniker": "AnalyzeMe\\AnalyzeMe.csproj",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\AnalyzeMe.csproj",
+              "RelativeToolTip": "AnalyzeMe\\AnalyzeMe.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-06T23:44:24.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "NetworkView.xaml",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\NetworkView.xaml",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\NetworkView.xaml",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\NetworkView.xaml",
+              "RelativeToolTip": "AnalyzeMe\\Views\\NetworkView.xaml",
+              "ViewState": "AQIAAPYAAAAAAAAAAADwvwUBAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-07T00:29:55.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProgramsView.xaml",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\ProgramsView.xaml",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\ProgramsView.xaml",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\ProgramsView.xaml",
+              "RelativeToolTip": "AnalyzeMe\\Views\\ProgramsView.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwv2QBAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-07T00:20:13.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AnalyzeMe",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\AnalyzeMe.csproj",
+              "RelativeDocumentMoniker": "AnalyzeMe\\AnalyzeMe.csproj",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\AnalyzeMe.csproj",
+              "RelativeToolTip": "AnalyzeMe\\AnalyzeMe.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-06T23:44:27.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "RecommendationsView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\RecommendationsView.xaml.cs",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\RecommendationsView.xaml.cs",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\RecommendationsView.xaml.cs",
+              "RelativeToolTip": "AnalyzeMe\\Views\\RecommendationsView.xaml.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAiwEcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T23:31:02.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "RecommendationsView.xaml",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\RecommendationsView.xaml",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\RecommendationsView.xaml",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\RecommendationsView.xaml",
+              "RelativeToolTip": "AnalyzeMe\\Views\\RecommendationsView.xaml",
+              "ViewState": "AQIAAOkAAAAAAAAAAADwv/gAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T23:30:50.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "DiagnosticsView.xaml",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\DiagnosticsView.xaml",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\DiagnosticsView.xaml",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\DiagnosticsView.xaml",
+              "RelativeToolTip": "AnalyzeMe\\Views\\DiagnosticsView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T23:21:13.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DashboardView.xaml",
+              "DocumentMoniker": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\DashboardView.xaml",
+              "RelativeDocumentMoniker": "AnalyzeMe\\Views\\DashboardView.xaml",
+              "ToolTip": "C:\\Users\\KyFu\\source\\repos\\AnalyzeMe\\AnalyzeMe\\Views\\DashboardView.xaml",
+              "RelativeToolTip": "AnalyzeMe\\Views\\DashboardView.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAANEAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T23:18:13.709Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
