@@ -50,13 +50,6 @@
    ```bash
    dotnet run
    ```
-
-### Optional: Speedtest Integration
-For internet speed testing functionality:
-1. Download [Speedtest CLI](https://www.speedtest.net/apps/cli) (`speedtest.exe`)
-2. Place it in the `Tools/` folder in the project root
-3. Restart AnalyzeMe
-
 ---
 
 ## 📋 Features Breakdown
